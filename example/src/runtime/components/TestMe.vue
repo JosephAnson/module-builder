@@ -1,18 +1,13 @@
-<script lang="ts">
-import { defineComponent } from 'vue'
+<script lang="ts" setup>
+import { defineProps } from 'vue'
 
-export default defineComponent({
-  props: {
-    count: {
-      type: Number,
-      required: true,
-    },
-  },
-})
+const props = defineProps<{
+  count: number
+}>()
 </script>
 
 <template>
   <div>
-    {{ count }}
+    {{ props.count }}
   </div>
 </template>
